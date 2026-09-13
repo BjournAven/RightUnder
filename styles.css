@@ -128,9 +128,12 @@ body {
   padding-top: 2rem;
   border-top: 1px solid var(--border-subtle);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.credit {
+.credit, .contact {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--text-muted);
@@ -140,4 +143,15 @@ body {
 .credit-name {
   color: var(--text-main);
   font-weight: 600;
+}
+
+.contact-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
