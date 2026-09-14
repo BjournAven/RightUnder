@@ -28,8 +28,14 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 2.5rem 1rem;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 6rem 2rem 4rem 2rem;
+  }
 }
 
 .site-wrapper {
@@ -37,7 +43,13 @@ body {
   max-width: 680px;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .site-wrapper {
+    gap: 4rem;
+  }
 }
 
 /* ==========================================================================
@@ -45,19 +57,34 @@ body {
    ========================================================================== */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 2rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 520px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
 }
 
 .logo {
   font-family: var(--font-mono);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 5vw, 2rem);
   font-weight: 400;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   color: var(--text-main);
   margin-bottom: 0.4rem;
+}
+
+@media (min-width: 520px) {
+  .logo {
+    letter-spacing: 4px;
+  }
 }
 
 .subtitle {
@@ -91,7 +118,13 @@ body {
 .content-flow {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .content-flow {
+    gap: 3rem;
+  }
 }
 
 .card-meta {
@@ -101,15 +134,21 @@ body {
   font-size: 0.65rem;
   color: var(--text-muted);
   letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .feature-card {
   background-color: var(--panel-bg);
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
-  padding: 2.5rem;
+  padding: 1.25rem;
   transition: border-color 0.3s ease;
+}
+
+@media (min-width: 520px) {
+  .feature-card {
+    padding: 2.5rem;
+  }
 }
 
 .feature-card:hover {
@@ -120,17 +159,29 @@ body {
   width: 100%;
 }
 
+.spotify-embed-container iframe {
+  width: 100%;
+  display: block;
+}
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 .footer {
-  margin-top: 2rem;
-  padding-top: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-subtle);
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+
+@media (min-width: 520px) {
+  .footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
 }
 
 .credit, .contact {
